@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilo básico para la tabla */
+.table th, .table td {
+    text-align: center;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* Botones pequeños */
+.btn-sm {
+    padding: 5px 10px;
+}
+
+/* Input de búsqueda */
+input[type="text"] {
+    width: 300px;
+}
