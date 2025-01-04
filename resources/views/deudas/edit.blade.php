@@ -82,8 +82,7 @@
                     <select class="form-control @error('intensidad') is-invalid @enderror" id="intensidad" name="intensidad" required>
                         <option value="1" {{ old('intensidad', $deuda->intensidad) == 1 ? 'selected' : '' }}>1</option>
                         <option value="2" {{ old('intensidad', $deuda->intensidad) == 2 ? 'selected' : '' }}>2</option>
-                        <option value="3" {{ old('intensidad', $deuda->intensidad) == 3 ? 'selected' : '' }}>3</option>
-                        <option value="4" {{ old('intensidad', $deuda->intensidad) == 4 ? 'selected' : '' }}>4</option>
+
                     </select>
                     @error('intensidad')
                         <div class="invalid-feedback">{{ $message }}</div>
@@ -96,7 +95,7 @@
                         <option value="1" {{ old('tiempo', $deuda->tiempo) == 1 ? 'selected' : '' }}>1</option>
                         <option value="2" {{ old('tiempo', $deuda->tiempo) == 2 ? 'selected' : '' }}>2</option>
                         <option value="3" {{ old('tiempo', $deuda->tiempo) == 3 ? 'selected' : '' }}>3</option>
-                        <option value="4" {{ old('tiempo', $deuda->tiempo) == 4 ? 'selected' : '' }}>4</option>
+
 
                     </select>
                     @error('tiempo')

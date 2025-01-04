@@ -95,7 +95,7 @@
                     <label for="intensidad">Intensidad</label>
                     <select class="form-control @error('intensidad') is-invalid @enderror" id="intensidad" name="intensidad">
                         <option value="" disabled selected>Seleccione una intensidad</option>
-                        @for ($i = 1; $i <= 4; $i++)
+                        @for ($i = 1; $i <= 2; $i++)
                             <option value="{{ $i }}" {{ old('intensidad') == $i ? 'selected' : '' }}>{{ $i }}</option>
                         @endfor
                     </select>
@@ -145,7 +145,7 @@
                 <!-- Tiempo -->
                 <div class="form-group">
                     <label for="tiempo">Tiempo</label>
-                    <input type="number" class="form-control @error('tiempo') is-invalid @enderror" id="tiempo" name="tiempo" value="{{ old('tiempo') }}" min="1" max="4">
+                    <input type="number" class="form-control @error('tiempo') is-invalid @enderror" id="tiempo" name="tiempo" value="{{ old('tiempo') }}" min="1" max="3">
                     @error('tiempo')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
