@@ -8,6 +8,20 @@
 
 
 @section('content')
+<!-- Vincula Awesome Notifications -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/awesome-notifications/dist/style.css">
+<!-- Script de Awesome Notifications -->
+<script src="https://cdn.jsdelivr.net/npm/awesome-notifications/dist/index.var.min.js"></script>
+<!-- Script de Awesome Notifications -->
+<script>
+    const notifier = new AWN();
+
+    // Mostrar notificación de éxito si hay un mensaje de éxito
+    @if(session('success'))
+        notifier.success("{{ session('success') }}");
+    @endif
+</script>
+
 <div class="container">
     <h1>Editar Perfil</h1>
     <form action="{{ route('profile.update') }}" method="POST">

@@ -24,7 +24,7 @@ class ProfileController extends Controller
         'password' => Hash::make($request->password),
     ]);
 
-    return redirect()->route('profile.change-password.form')->with('status', 'password-updated');
+    return redirect()->route('profile.change-password.form')->with('success', 'Contraseña cambiada exitosamente');
 }
     /**
      * Display the user's profile form.
@@ -50,7 +50,7 @@ class ProfileController extends Controller
 
         $request->user()->save();
 
-        return Redirect::route('profile.edit')->with('status', 'profile-updated');
+        return Redirect::route('profile.edit')->with('success', 'Datos cambiados exitosamente');
     }
 
     /**
@@ -75,7 +75,7 @@ class ProfileController extends Controller
     }
     public function changePasswordForm()
     {
-        return view('profile.change-password');  // Vista para cambiar la contraseña
+        return view('profile.change-password')->with('success', 'Contraseña cambiada exitosamente');  // Vista para cambiar la contraseña
     }
 }
 
